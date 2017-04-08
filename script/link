@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# script/link <dotfiles>
+#
+# Ex:
+#   script/link tmux
+
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# Change directory to parent directory of this script.
+cd "$(dirname "$0")/.."
+
+# Stow the specified dotfiles.
+stow -t ~/ -vv $1

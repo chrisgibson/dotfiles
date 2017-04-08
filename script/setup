@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# script/setup
+#
+# Sets up dependencies required to link dotfiles.
+
+# Install GNU Stow via Homebrew
+# https://www.gnu.org/software/stow
+brew install stow
