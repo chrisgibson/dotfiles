@@ -2,8 +2,20 @@
 
 # script/setup
 #
-# Sets up dependencies required to link dotfiles.
+# Sets up dependencies required to link/use dotfiles.
 
 # Install GNU Stow via Homebrew
 # https://www.gnu.org/software/stow
 brew install stow
+
+# Install zplug ZSH plugin manager
+# https://github.com/zplug/zplug
+brew install zplug
+
+# Install rbenv
+# https://github.com/rbenv/rbenv
+brew install rbenv
+
+# Install rbenv-default-gems
+# https://github.com/rbenv/rbenv-default-gems
+brew install rbenv-default-gems
