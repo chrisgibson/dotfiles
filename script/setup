@@ -19,3 +19,11 @@ brew install rbenv
 # Install rbenv-default-gems
 # https://github.com/rbenv/rbenv-default-gems
 brew install rbenv-default-gems
+
+# Install vim
+# with Python3 support (necessary for denite.vim)
+brew install vim --with-python3
+
+# Install [exuberant] ctags
+# http://ctags.sourceforge.net
+brew install ctags
