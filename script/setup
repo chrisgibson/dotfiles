@@ -27,3 +27,15 @@ brew install vim --with-python3
 # Install [exuberant] ctags
 # http://ctags.sourceforge.net
 brew install ctags
+
+# Install switchaudio-osx
+# https://github.com/deweller/switchaudio-osx
+brew install switchaudio-osx
+
+# Install terminal-notifier
+# https://github.com/julienXX/terminal-notifier
+brew install terminal-notifier
+
+# Install reattach-to-user-namespace
+# https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+brew install reattach-to-user-namespace
