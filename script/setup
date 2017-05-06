@@ -20,6 +20,10 @@ brew install rbenv
 # https://github.com/rbenv/rbenv-default-gems
 brew install rbenv-default-gems
 
+# Install yarn
+# https://yarnpkg.com/en/
+brew install yarn
+
 # Install vim
 # with Python3 support (necessary for denite.vim)
 brew install vim --with-python3
