@@ -27,6 +27,8 @@ fi
 
 zplug load
 
+export EDITOR=vim
+
 # Initialize rbenv if present.
 if [ ! -z `which rbenv` ]; then
   eval "$(rbenv init -)"
