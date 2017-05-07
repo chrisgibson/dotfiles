@@ -1,0 +1,17 @@
+brakeman
+bundler
+flay
+flog
+pronto
+pronto-brakeman
+pronto-flay
+pronto-poper
+pronto-rails_best_practices
+pronto-rails_schema
+pronto-reek
+pronto-rubocop
+pronto-shellcheck
+pronto-spell
+reek
+rubocop
+ruby-lint
