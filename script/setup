@@ -32,6 +32,12 @@ brew install vim --with-python3
 # http://ctags.sourceforge.net
 brew install ctags
 
+# Install CMake
+# https://cmake.org
+# A dependency for the rugged gem (which is a dependency for pronto).
+# https://github.com/libgit2/rugged#install
+brew install cmake
+
 # Install switchaudio-osx
 # https://github.com/deweller/switchaudio-osx
 brew install switchaudio-osx
