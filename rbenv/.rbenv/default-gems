@@ -11,7 +11,6 @@ pronto-rails_schema
 pronto-reek
 pronto-rubocop
 pronto-shellcheck
-pronto-spell
 reek
 rubocop
 ruby-lint
