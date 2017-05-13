@@ -38,6 +38,8 @@ fi
 
 # Aliases
 alias be="bundle exec"
+alias ggpull="git pull origin $(git_current_branch)"
+alias ggpush="git push origin $(git_current_branch)"
 alias gst="git status"
 
 # If there is a local ZSH configuration, source it.
