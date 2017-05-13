@@ -42,6 +42,8 @@ alias ggpull="git pull origin $(git_current_branch)"
 alias ggpush="git push origin $(git_current_branch)"
 alias gst="git status"
 
+export PATH="~/bin:$PATH"
+
 # If there is a local ZSH configuration, source it.
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
