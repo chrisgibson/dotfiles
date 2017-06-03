@@ -1,10 +1,10 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+# Path to the oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
 
-# Bullet Train theme
-# https://github.com/caiogondim/bullet-train.zsh
-setopt prompt_subst
-zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="bullet-train"
 
 BULLETTRAIN_PROMPT_ORDER=(
   time
@@ -17,31 +17,25 @@ BULLETTRAIN_TIME_BG=black
 BULLETTRAIN_TIME_FG=white
 BULLETTRAIN_DIR_EXTENDED=0
 
-# Install plugins (if needed).
-if ! zplug check; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
+# Use hyphen-insensitive completion. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
 
-zplug load
+# Disable auto-setting terminal title.
+DISABLE_AUTO_TITLE="true"
 
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(bundler git github history rbenv)
+
+# Specify rbenv installation, otherwise the oh-my-zsh plugin uses the brew
+# installation path.
+RBENV_ROOT=~/.rbenv
+
+source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
-
-# Initialize rbenv if present.
-if [ ! -z `which rbenv` ]; then
-  eval "$(rbenv init -)"
-fi
-
-# Aliases
-alias be="bundle exec"
-alias ggpull="git pull origin $(git_current_branch)"
-alias ggpush="git push origin $(git_current_branch)"
-alias gst="git status"
-
 export PATH="~/bin:$PATH"
 
 # If there is a local ZSH configuration, source it.
