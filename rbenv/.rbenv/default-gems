@@ -2,6 +2,7 @@ brakeman
 bundler
 flay
 flog
+overcommit
 pronto
 pronto-brakeman
 pronto-flay

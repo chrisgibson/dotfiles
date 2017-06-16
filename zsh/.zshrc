@@ -44,6 +44,11 @@ alias gst="git status"
 
 export PATH="~/bin:$PATH"
 
+# Automatically install overcommit hooks
+if type overcommit > /dev/null; then
+  export GIT_TEMPLATE_DIR=`overcommit --template-dir`
+fi
+
 # If there is a local ZSH configuration, source it.
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
