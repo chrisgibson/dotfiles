@@ -8,10 +8,6 @@
 # https://www.gnu.org/software/stow
 brew install stow
 
-# Install zplug ZSH plugin manager
-# https://github.com/zplug/zplug
-brew install zplug
-
 # Install rbenv
 # https://github.com/rbenv/rbenv
 brew install rbenv
@@ -49,3 +45,7 @@ brew install terminal-notifier
 # Install reattach-to-user-namespace
 # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 brew install reattach-to-user-namespace
+
+# Install hub
+# https://hub.github.com/
+brew install hub
