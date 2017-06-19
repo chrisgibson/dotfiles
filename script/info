@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# script/info <dotfiles>
+#
+# Ex:
+#   script/info tmux
+
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# Change directory to parent directory of this script
+cd "$(dirname "$0")/.."
+
+# Change directory to the dotfiles specified.
+cd "$1"
+
+echo "$1"
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+# Print out the linked status of dotfiles.
+find . -depth 1 -print0 | while IFS= read -r -d '' file1; do
+  if [ "$(stat -f "%d:%i" $file1)" = "$(stat -L -f "%d:%i" $HOME/$(basename $file1) 2>/dev/null)" ] ; then
+    printf "  ${GREEN}✔︎${NC} $(basename $file1)\n"
+  else
+    find "./$file1" -depth 1 -print0 | while IFS= read -r -d '' file2; do
+      if [ "$(stat -f "%d:%i" $file2)" = "$(stat -L -f "%d:%i" $HOME/$(basename $file1)/$(basename $file2) 2>/dev/null)" ] ; then
+        printf "  ${GREEN}✔︎${NC} $(basename $file1)/$(basename $file2)\n"
+      else
+        printf "  ${RED}✘${NC} $(basename $file1)/$(basename $file2)\n"
+      fi
+    done
+  fi
+done

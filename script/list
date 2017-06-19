@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# script/list
+#
+# Ex:
+#   script/list
+
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# Change directory to parent directory of this script
+cd "$(dirname "$0")/.."
+
+# Execute the "info" script for all dotfiles.
+find ./* -maxdepth 0 -type d \( ! -name script \) -execdir ./script/info "{}" \;
