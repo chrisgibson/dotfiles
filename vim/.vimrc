@@ -77,6 +77,11 @@ set updatetime=1000
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gV
+vnoremap <S-Tab> <gV
 
 set mouse=n
 set ttymouse=xterm2
